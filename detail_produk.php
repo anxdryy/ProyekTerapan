@@ -5,6 +5,8 @@ $result = mysqli_query($conn, "SELECT * FROM produk WHERE kode_produk = '$kode'"
 $row = mysqli_fetch_assoc($result);
 
 ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
 <div class="container">
 	<h2 style=" width: 100%; border-bottom: 4px solid #ff8680"><b>Detail produk</b></h2>
 
@@ -65,3 +67,4 @@ $row = mysqli_fetch_assoc($result);
 <?php 
 include 'footer.php';
 ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

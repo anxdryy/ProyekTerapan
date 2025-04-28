@@ -5,11 +5,12 @@ if(isset($_SESSION['kd_cs'])){
 
 	$kode_cs = $_SESSION['kd_cs'];
 }
+$current_page = basename($_SERVER['PHP_SELF']); // Ambil nama file halaman saat ini
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Rapi-Cake Backery</title>
+	<title>NASKUN ZAHRA</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
@@ -18,26 +19,44 @@ if(isset($_SESSION['kd_cs'])){
 
 
 </head>
+<style>
+	.navbar-nav li.active a {
+    position: relative;
+    color: #000 !important; /* Warna teks tetap hitam */
+    font-weight: bold;
+}
+
+.navbar-nav li.active a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Atur jarak garis dengan teks */
+    width: 100%;
+    height: 3px; /* Ketebalan garis */
+    background-color: #000; /* Warna garis */
+}
+
+</style>
 <body>
-	<div class="container-fluid">
+	<!-- <div class="container-fluid">
 		<div class="row top">
 			<center>
 				<div class="col-md-4" style="padding: 3px;">
-					<span> <i class="glyphicon glyphicon-earphone"></i> +6287804616097</span>
+					<!-- <span> <i class="glyphicon glyphicon-earphone"></i> +62 812-2085-1610</span> -->
+				<!-- </div>
+
+
+				<div class="col-md-4"  style="padding: 3px;">
+					<span></span>
 				</div>
 
 
 				<div class="col-md-4"  style="padding: 3px;">
-					<span><i class="glyphicon glyphicon-envelope"></i> rapi-cakebakery@gmail.com</span>
-				</div>
-
-
-				<div class="col-md-4"  style="padding: 3px;">
-					<span>rapi-cake bakery Indonesia</span>
-				</div>
+					<span>Naskun Zahra</span> -->
+				<!-- </div>
 			</center>
 		</div>
-	</div>
+	</div> --> 
 
 	<nav class="navbar navbar-default" style="padding: 5px;">
 		<div class="container">
@@ -49,15 +68,23 @@ if(isset($_SESSION['kd_cs'])){
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#" style="color: #ff8680"><b>RAPI-CAKE BAKERY</b></a>
+				<a class="navbar-brand" href="#" style="color: #000000"><b>NASKUN ZAHRA</b></a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="index.php">Home</a></li>
-					<li><a href="produk.php">Produk</a></li>
-					<li><a href="about.php">Tentang Kami</a></li>
-					<li><a href="manual.php">Manual Aplikasi</a></li>
+			<ul class="nav navbar-nav navbar-right">
+    <li class="<?= ($current_page == 'index.php') ? 'active' : '' ?>">
+        <a href="index.php">Home</a>
+    </li>
+    <li class="<?= ($current_page == 'produk.php') ? 'active' : '' ?>">
+        <a href="produk.php">Produk</a>
+    </li>
+    <li class="<?= ($current_page == 'about.php') ? 'active' : '' ?>">
+        <a href="about.php">Tentang Kami</a>
+    </li>
+    <li class="<?= ($current_page == 'manual.php') ? 'active' : '' ?>">
+        <a href="manual.php">Manual Aplikasi</a>
+    </li>
 					<?php 
 					if(isset($_SESSION['kd_cs'])){
 					$kode_cs = $_SESSION['kd_cs'];

@@ -1,7 +1,7 @@
 <?php 
 include 'header.php';
 ?>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 <style type="text/css">
     .bs-acc{
         margin: 20px;
@@ -47,3 +47,4 @@ include 'header.php';
 <?php 
 include 'footer.php';
 ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

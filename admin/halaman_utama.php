@@ -14,6 +14,8 @@ $result3 = mysqli_query($conn, "SELECT distinct invoice FROM produksi WHERE  ter
 $jml3 = mysqli_num_rows($result3);
 
 ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-4" >
@@ -66,3 +68,4 @@ $jml3 = mysqli_num_rows($result3);
 <?php 
 include 'footer.php';
 ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

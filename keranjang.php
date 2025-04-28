@@ -27,7 +27,7 @@ if(isset($_POST['submit1'])){
 }
 
 ?>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
 <div class="container" style="padding-bottom: 300px;">
 	<h2 style=" width: 100%; border-bottom: 4px solid #ff8680"><b>Keranjang</b></h2>
@@ -127,3 +127,4 @@ if(isset($_POST['submit1'])){
 <?php 
 include 'footer.php';
 ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

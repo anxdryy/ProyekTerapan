@@ -31,7 +31,9 @@ $t_cs = mysqli_fetch_assoc($cs);
 		<tbody>
 
 			<?php 
-			$result = mysqli_query($conn, "SELECT DISTINCT invoice, kode_customer, status, kode_produk, qty,terima,tolak, cek FROM produksi group by invoice");
+			$result = mysqli_query($conn, "SELECT DISTINCT invoice, kode_customer, status, kode_produk, qty, terima, tolak, cek 
+			FROM produksi 
+			GROUP BY invoice, kode_customer, status, kode_produk, qty, terima, tolak, cek");
 			$no = 1;
 			$array = 0;
 			while($row = mysqli_fetch_assoc($result)){
@@ -185,34 +187,42 @@ $t_cs = mysqli_fetch_assoc($cs);
 
 		<?php 
 if($cek_sor > 0){
- ?>
-	<br>
-	<br>
-	<div class="row">
-		<div class="col-md-4 bg-danger" style="padding:10px;">
-			<h4>Kekurangan Material </h4>
-			<h5 style="color: red;font-weight: bold;">Silahkan Tambah Stok Material dibawah ini : </h5>
-			<table class="table table-striped">
-				<tr>
-					<th>No</th>
-					<th>Material</th>
-				</tr>
-	<?php 
-	$arr = array_values(array_unique($nama_material));
-	for ($i=0; $i < count($arr); $i++) { 
-
-	 ?>
-				<tr>
-					<td><?= $i+1 ?></td>
-					<td><?= $arr[$i]; ?></td>
-				</tr>
-	<?php } ?>
-			</table>
+	?>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-4 bg-danger" style="padding:10px;">
+				<h4>Kekurangan Material </h4>
+				<h5 style="color: red;font-weight: bold;">Silahkan Tambah Stok Material dibawah ini : </h5>
+				<table class="table table-striped">
+					<tr>
+						<th>No</th>
+						<th>Material</th>
+					</tr>
+					<?php 
+					if (!empty($nama_material)) { // Pastikan array tidak kosong
+						$arr = array_values(array_unique($nama_material));
+						for ($i=0; $i < count($arr); $i++) { 
+					?>
+					<tr>
+						<td><?= $i+1 ?></td>
+						<td><?= $arr[$i]; ?></td>
+					</tr>
+					<?php 
+						}
+					} else { 
+					?>
+					<tr>
+						<td colspan="2" class="text-center">Tidak ada material yang kurang.</td>
+					</tr>
+					<?php } ?>
+				</table>
+			</div>
 		</div>
-	</div>
-<?php 
-}
- ?>
+	<?php 
+	}
+	?>
+	
 	</div>
 	<br>
 	<br>
