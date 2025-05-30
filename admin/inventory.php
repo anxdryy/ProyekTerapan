@@ -24,7 +24,7 @@ if(isset($_GET['page'])){
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
 <div class="container">
-	<h2 style=" width: 100%; border-bottom: 4px solid gray"><b>Inventory Material</b></h2>
+	<h2 style=" width: 100%; border-bottom: 4px solid gray"><b>Stok Makanan</b></h2>
 	<table class="table table-striped">
 		<thead>
 			<tr>

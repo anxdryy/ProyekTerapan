@@ -38,16 +38,16 @@ if(!isset($_SESSION['admin'])){
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-folder-close"></i> Data Master <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="m_produk.php">Master Produk</a></li>
-							<li><a href="m_customer.php">Master Customer</a></li>
+							<li><a href="m_produk.php">Kelola Produk</a></li>
+							<li><a href="m_customer.php">Kelola Customer</a></li>
 						</ul>
 					</li>
 
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-retweet"></i> Data Transaksi <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="produksi.php">Produksi</a></li>
-							<li><a href="inventory.php">Inventory</a></li>
+							<li><a href="produksi.php">Kelola Pemesanan</a></li>
+							<li><a href="inventory.php">Kelola Stok</a></li>
 							
 						</ul>
 					</li>

@@ -1,6 +1,6 @@
 <?php 
 include 'header.php';
-$date = date('yy-m-d');
+$date = date('Y-m-d');
 
 if(isset($_POST['submit'])){
 	$date1 = $_POST['date1'];

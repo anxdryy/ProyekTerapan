@@ -15,7 +15,7 @@ include 'header.php';
 			<div class="col-md-6">
 				<div class="form-group">
 					<label for="exampleInputPassword1">Email</label>
-					<input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email" name="email" required>
+					<input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email" name="email" required pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" title="Email harus menggunakan format lengkap seperti nama@gmail.com">
 				</div>
 			</div>
 		</div>

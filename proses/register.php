@@ -40,6 +40,39 @@ if($password == $konfirmasi){
 		die;
 	}
 
+	// Validasi email harus format @gmail.com lengkap
+if (!preg_match('/^[a-zA-Z0-9._%+-]+@gmail\.com$/', $email)) {
+	echo "
+	<script>
+	alert('Email harus menggunakan domain @gmail.com secara lengkap');
+	window.location = '../register.php';
+	</script>
+	";
+	exit;
+}
+
+// Validasi nomor telepon hanya angka
+if (!is_numeric($tlp)) {
+	echo "
+	<script>
+	alert('Nomor telepon hanya boleh angka');
+	window.location = '../register.php';
+	</script>
+	";
+	exit;
+}
+
+	// Validasi password kuat
+if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/', $password)) {
+	echo "
+	<script>
+	alert('Password harus minimal 8 karakter, mengandung huruf besar, huruf kecil, dan angka');
+	window.location = '../register.php';
+	</script>
+	";
+	exit;
+}
+
 	$result = mysqli_query($conn, "INSERT INTO customer VALUES('$format','$nama', '$email', '$username', '$hash', '$tlp')");
 	if($result){
 		echo "
